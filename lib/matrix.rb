@@ -3,6 +3,6 @@ class MatrixExtraction
     matrix.split("\n")[rowValue].split(' ').inject(Array.new) {|array,ch| array << ch.to_i}
   end
   def column(matrix,columnValue)
-    [1,4,7,8]
+    matrix.split("\n").inject(Array.new) { |array,ch| array << ch.split(' ')[columnValue].to_i }
   end
 end
