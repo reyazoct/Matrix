@@ -16,4 +16,9 @@ describe "MatrixExtraction" do
     mat = "9 8 7\n19 18 17"
     expect(matrix.row(mat,1)).to eq [19,18,17]
   end
+
+  it "test to extract 0th column from '1 2 3\\n4 5 6\\n7 8 9\\n8 7 6'" do
+    mat = "1 2 3\n4 5 6\n7 8 9\n8 7 6"
+    expect(matrix.column(mat,0)).to eq [1,2,3]
+  end
 end
